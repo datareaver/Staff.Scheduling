@@ -60,10 +60,11 @@ shinyServer(function(input, output) {
         
         #Create Labels with Hours and Weekdays and assign custom colors
         wd.list <- c('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday')
-        labels <- c('')
+        labels <- c(lab)
         for (i in wd.list) {
             labels <- c(labels,i,'')
         }
+        
         labels <- paste(c(rep(seq(0,23,12),7),0),labels,sep = '\n')
         colors <- brewer.pal(12,'Set3')[c(5,12)]
         
